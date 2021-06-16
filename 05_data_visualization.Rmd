@@ -1,6 +1,7 @@
 ---
 title: "Data Visualization"
 date: `r Sys.Date()`
+institute: "Numeric Mind"
 output: html_document
 ---
 
