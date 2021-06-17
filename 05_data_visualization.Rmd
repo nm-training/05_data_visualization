@@ -1,7 +1,6 @@
 ---
 title: "Data Visualization"
 date: `r Sys.Date()`
-institute: "Numeric Mind"
 output: html_document
 ---
 
@@ -15,22 +14,21 @@ knitr::opts_chunk$set(
 
 ## Task 1
 
-- Run this code to observe the data set
+- Load the tidyverse package here:
 
 ```{r}
-movies <-  readr::read_csv("https://bit.ly/35qiemi")
-
-movies
 
 ```
 
+
 ## Task 2
 
-- Load the ggplot2 package here:
+- Run this code to observe the data set
 
 ```{r}
+movies <-  read_csv("https://bit.ly/35qiemi")
 
-
+movies
 ```
 
 ## Task 3
@@ -39,7 +37,7 @@ movies
 
 ```{r}
 
-ggplot(data =   )
+ggplot(data =     )
 
 ```
 
@@ -126,31 +124,36 @@ ggplot(
 
 ## Task 8
 
-- Create a bar plot to visualize the counts of genre and also, 
+- Create a bar plot to visualize the counts of `genre` and also, 
   fill the bar plot according to mpaa_rating:
 
 ```{r}
+
 ggplot(data = ) +
   geom_bar(aes(x = , fill = ))
+
 ```
 
-#Task9:
+#Task 9:
 
 - Task 8 creates a bar_chart with default: position='stack'.
 
-- Copy the ggplot code from task8 and modify the position to      'dodge' to create a dodged bar graph.
+- Copy the ggplot code from task8 and modify the position 
+  to 'dodge' to create a dodged bar graph.
 
 - Hint: the dodge position should be mentioned outside aes()
 
+- Finally, save the plot into `myplot` 
+
 ```{r}
 
-
+myplot
 
 ```
 
 ## Task 10
 
-- Label the graph from task9 with with labs(   )
+- Label the graph from task9 with with labs()
 
 - Set the title: "Movie genre with mpaa rating"
 
@@ -158,9 +161,11 @@ ggplot(data = ) +
 
 - Set the caption: "Source: Tidytuesday"
 
-- Label x-axis as: "Different movie genre"
+- Set the tag: "Fig 1"
 
-- Label y-axis as: "Total number of movies released"
+- Label x-axis (x) as: "Different movie genre"
+
+- Label y-axis (y) as: "Total number of movies released"
 
 - Label the legend as: "Movie ratings"
 
@@ -178,7 +183,7 @@ ggplot(data = ) +
 
 ## Task 11
 
-- Create a box plot for worldwide_gross.
+- Create a box plot for `worldwide_gross`.
 
 ```{r}
 
@@ -192,15 +197,17 @@ ggplot(data = movies) +
 
 #Task 12
 
-- Create a box plot of worldwide_gross for each genre.
+- Create a box plot of `worldwide_gross` for each genre.
 
 ```{r}
 
 ggplot(data = ) +
   geom_boxplot(
     mapping =
-      aes(x = , y = worldwide_gross)
+      aes(x = , 
+          y = worldwide_gross)
   )
+
 ```
 
 ## Task 13
@@ -239,4 +246,3 @@ gross +
 
 
 ```
-
